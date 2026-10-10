@@ -1,6 +1,6 @@
 {
   "name": "treasurydirect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Typed, zero-dependency client for the US Treasury's free public APIs — auction results, upcoming auctions, security lookups by CUSIP, and Debt to the Penny. No API key required.",
   "keywords": [
     "treasurydirect",
