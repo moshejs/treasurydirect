@@ -20,5 +20,11 @@ const single = await getSecurity(first.cusip, first.issueDate.slice(0, 10));
 console.log(`getSecurity: ${single.cusip} rate ${num(single.interestRate)}`);
 
 const debt = await currentDebt();
-console.log(`total debt (${debt.effectiveDate}): $${(debt.totalDebt / 1e12).toFixed(2)}T`);
+console.log(`total debt (${debt.date}): $${(debt.totalDebt / 1e12).toFixed(2)}T`);
+
+try {
+  await getSecurity(first.cusip, "2000-01-03");
+} catch (e) {
+  console.log(`missing security -> ${e.name} ${e.status}`);
+}
 console.log("SMOKE OK");
